@@ -1,8 +1,6 @@
-<img  width='240' src='https://github.com/BoostIO/prismy/blob/master/resources/logo.svg' alt='Prismy'>
-
 # `prismy-test-server`
 
-:telescope: E2E test tool for prismy.
+:telescope: E2E test tool for [prismy](https://github.com/BoostIO/prismy).
 
 ```ts
 import { testServer } from 'prismy-test-server'
