@@ -3,12 +3,9 @@
   "version": "0.1.0",
   "description": "E2E test tool for prismy",
   "keywords": [
-    "micro",
-    "service",
-    "microservice",
-    "serverless",
-    "API",
-    "now"
+    "prismy",
+    "test",
+    "e2e"
   ],
   "author": "Junyoung Choi <fluke8259@gmail.com>",
   "homepage": "https://github.com/BoostIO/prismy-test-server",
