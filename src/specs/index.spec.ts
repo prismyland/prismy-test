@@ -4,7 +4,7 @@ import got from 'got'
 describe('testServer', () => {
   it('tests server', async () => {
     class Handler {
-      execute() {
+      handle() {
         return 'Hello, World!'
       }
     }
@@ -20,7 +20,7 @@ describe('testServer', () => {
 
   it('handles error', async () => {
     class Handler {
-      execute() {
+      handle() {
         return 'Hello, World!'
       }
     }
