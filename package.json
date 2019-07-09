@@ -39,9 +39,8 @@
     "codecov": "^3.5.0",
     "got": "^9.6.0",
     "jest": "^24.8.0",
-    "micro": "^9.3.5-canary.1",
     "prettier": "^1.17.1",
-    "prismy": "^0.8.0",
+    "prismy": "^0.9.0",
     "rimraf": "^2.6.3",
     "ts-jest": "^24.0.2",
     "tslib": "^1.9.3",
@@ -49,7 +48,7 @@
   },
   "peerDependencies": {
     "micro": "^9.3.5-canary.1",
-    "prismy": "^0.8.0"
+    "prismy": "^0.9.0"
   },
   "dependencies": {
     "test-listen": "^1.1.0"
