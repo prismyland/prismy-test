@@ -7,22 +7,21 @@
     "test",
     "e2e"
   ],
-  "author": "Junyoung Choi <fluke8259@gmail.com>",
+  "author": "Junyoung Choi <rokt33r.choi@gmail.com>",
   "homepage": "https://github.com/BoostIO/prismy-test-server",
   "license": "MIT",
   "main": "dist",
   "files": [
-    "dist/**/*",
-    "!dist/specs/**/*"
+    "dist/**/*"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BoostIO/prismy-test-server.git"
   },
   "scripts": {
-    "build": "rimraf dist && tsc",
-    "lint": "prettier --check src/**/*.ts examples/*/src/**/*.ts",
-    "format": "prettier --write src/**/*.ts examples/*/src/**/*.ts",
+    "build": "rimraf dist && tsc -P tsconfig.build.json",
+    "lint": "prettier --check src/**/*.ts specs/*/src/**/*.ts",
+    "format": "prettier --write src/**/*.ts specs/*/src/**/*.ts",
     "test": "jest",
     "test-ci": "jest --coverage",
     "codecov": "codecov -f coverage/*.json",
@@ -40,14 +39,13 @@
     "got": "^9.6.0",
     "jest": "^24.8.0",
     "prettier": "^1.17.1",
-    "prismy": "^0.9.0",
+    "prismy": "^0.12.0",
     "rimraf": "^2.6.3",
     "ts-jest": "^24.0.2",
-    "tslib": "^1.9.3",
     "typescript": "^3.4.5"
   },
   "peerDependencies": {
-    "prismy": "^0.9.0"
+    "prismy": "^0.12.0"
   },
   "dependencies": {
     "test-listen": "^1.1.0"
