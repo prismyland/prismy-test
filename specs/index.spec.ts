@@ -1,4 +1,4 @@
-import { testServer } from '..'
+import { testServer } from '../src'
 import got from 'got'
 
 describe('testServer', () => {
