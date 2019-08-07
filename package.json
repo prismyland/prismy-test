@@ -45,7 +45,7 @@
     "typescript": "^3.4.5"
   },
   "peerDependencies": {
-    "prismy": "^0.12.0"
+    "prismy": ">= 0.12.0 < 1"
   },
   "dependencies": {
     "test-listen": "^1.1.0"
