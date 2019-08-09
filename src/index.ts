@@ -1,12 +1,14 @@
 import http from 'http'
 import listen from 'test-listen'
-import { prismy, HandlerClass } from 'prismy'
+import { RequestListener } from 'http'
 
-export async function testServer(
-  handlerClass: HandlerClass | HandlerClass[],
-  testCallback: (url: string) => any
+export type TestHandlerCallback = (url: string) => void
+
+export async function testHandler(
+  handler: RequestListener,
+  testCallback: TestHandlerCallback
 ): Promise<void> {
-  const server = new http.Server(prismy(handlerClass))
+  const server = new http.Server(handler)
 
   const url = await listen(server)
   try {
