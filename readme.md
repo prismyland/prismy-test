@@ -1,6 +1,6 @@
-# `prismy-test-server`
+# `prismy-test`
 
-:telescope: E2E test tool for [prismy](https://github.com/prismyland/prismy).
+:wrench: Test toolkit for [prismy](https://github.com/prismyland/prismy).
 
 [![Build Status](https://travis-ci.com/prismyland/prismy-test-server.svg?branch=master)](https://travis-ci.com/prismyland/prismy-test-server)
 [![codecov](https://codecov.io/gh/prismyland/prismy-test-server/branch/master/graph/badge.svg)](https://codecov.io/gh/prismyland/prismy-test-server)
@@ -8,18 +8,17 @@
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/prismyland/prismy-test-server.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/prismyland/prismy-test-server/context:javascript)
 
 ```ts
-import { testServer } from 'prismy-test-server'
 import got from 'got'
+import { prismy, res } from 'prismy'
+import { testHandler } from 'prismy-test'
 
 describe('testServer', () => {
   it('tests server', async () => {
-    class Handler {
-      execute() {
-        return 'Hello, World!'
-      }
-    }
+    const handler = prismy([], () => {
+      return res('Hello, World!')
+    })
 
-    await testServer(Handler, async url => {
+    await testHandler(handler, async url => {
       const result = await got(url)
 
       expect(result).toMatchObject({
