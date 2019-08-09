@@ -2,10 +2,10 @@
 
 :wrench: Test toolkit for [prismy](https://github.com/prismyland/prismy).
 
-[![Build Status](https://travis-ci.com/prismyland/prismy-test-server.svg?branch=master)](https://travis-ci.com/prismyland/prismy-test-server)
-[![codecov](https://codecov.io/gh/prismyland/prismy-test-server/branch/master/graph/badge.svg)](https://codecov.io/gh/prismyland/prismy-test-server)
-[![NPM download](https://img.shields.io/npm/dm/prismy-test-server.svg)](https://www.npmjs.com/package/prismy-test-server)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/prismyland/prismy-test-server.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/prismyland/prismy-test-server/context:javascript)
+[![Build Status](https://travis-ci.com/prismyland/prismy-test.svg?branch=master)](https://travis-ci.com/prismyland/prismy-test)
+[![codecov](https://codecov.io/gh/prismyland/prismy-test/branch/master/graph/badge.svg)](https://codecov.io/gh/prismyland/prismy-test)
+[![NPM download](https://img.shields.io/npm/dm/prismy-test.svg)](https://www.npmjs.com/package/prismy-test)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/prismyland/prismy-test.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/prismyland/prismy-test/context:javascript)
 
 ```ts
 import got from 'got'
