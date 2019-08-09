@@ -1,14 +1,14 @@
 {
-  "name": "prismy-test-server",
+  "name": "prismy-test",
   "version": "0.4.1",
-  "description": "E2E test tool for prismy",
+  "description": ":wrench: Test toolkit for prismy",
   "keywords": [
     "prismy",
     "test",
     "e2e"
   ],
   "author": "Junyoung Choi <rokt33r.choi@gmail.com>",
-  "homepage": "https://github.com/BoostIO/prismy-test-server",
+  "homepage": "https://github.com/prismyland/prismy-test",
   "license": "MIT",
   "main": "dist",
   "files": [
@@ -16,19 +16,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BoostIO/prismy-test-server.git"
+    "url": "git+https://github.com/prismyland/prismy-test.git"
   },
   "scripts": {
     "build": "rimraf dist && tsc -P tsconfig.build.json",
-    "lint": "prettier --check src/**/*.ts specs/*/src/**/*.ts",
-    "format": "prettier --write src/**/*.ts specs/*/src/**/*.ts",
+    "lint": "prettier --check src/**/*.ts specs/**/*.ts",
+    "format": "prettier --write src/**/*.ts specs/**/*.ts",
     "test": "jest",
     "test-ci": "jest --coverage",
     "codecov": "codecov -f coverage/*.json",
     "prepublishOnly": "npm run lint && npm test && npm run build"
   },
   "bugs": {
-    "url": "https://github.com/BoostIO/prismy-test-server/issues"
+    "url": "https://github.com/prismyland/prismy-test/issues"
   },
   "devDependencies": {
     "@types/got": "^9.4.4",
@@ -39,13 +39,13 @@
     "got": "^9.6.0",
     "jest": "^24.8.0",
     "prettier": "^1.17.1",
-    "prismy": "^0.12.0",
+    "prismy": "^1.1.0",
     "rimraf": "^2.6.3",
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
   },
   "peerDependencies": {
-    "prismy": ">= 0.12.0 < 1"
+    "prismy": ">= 1.1 < 2"
   },
   "dependencies": {
     "test-listen": "^1.1.0"
