@@ -1,15 +1,28 @@
-import { testServer } from '../src'
 import got from 'got'
+import { prismy, res } from 'prismy'
+import { testHandler } from '../src'
 
 describe('testServer', () => {
   it('tests server', async () => {
-    class Handler {
-      handle() {
-        return 'Hello, World!'
-      }
-    }
+    const handler = prismy([], () => {
+      return res('Hello, World!')
+    })
 
-    await testServer(Handler, async url => {
+    await testHandler(handler, async url => {
+      const result = await got(url)
+
+      expect(result).toMatchObject({
+        body: 'Hello, World!'
+      })
+    })
+  })
+
+  it('tests server', async () => {
+    const handler = prismy([], () => {
+      return res('Hello, World!')
+    })
+
+    await testHandler(handler, async url => {
       const result = await got(url)
 
       expect(result).toMatchObject({
@@ -19,14 +32,12 @@ describe('testServer', () => {
   })
 
   it('handles error', async () => {
-    class Handler {
-      handle() {
-        return 'Hello, World!'
-      }
-    }
+    const handler = prismy([], () => {
+      return res('Hello, World!')
+    })
 
     await expect(
-      testServer(Handler, async url => {
+      testHandler(handler, async url => {
         throw new Error('Bang!')
       })
     ).rejects.toMatchObject({
